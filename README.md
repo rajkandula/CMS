@@ -1,6 +1,6 @@
-# project_igscf
+# CMS - Community Management Software
 
-•	Developed a responsive fellowship website with an admin dashboard to manage the inside content using Express.js, Handlebars, MongoDB & Mongoose, and Firebase.
+•	Developed a responsive Management website with an admin dashboard to manage the inside content using Express.js, Handlebars, MongoDB & Mongoose, and Firebase.
 •	Used Mongoose to store images and document files on the website.
 
 For Project Real-time check, click here- https://igscf.onrender.com/
@@ -9,7 +9,7 @@ Developed organization website,
 
 Project Demonstration Video - https://youtu.be/s_ZAJtUlqoA?feature=shared
 
-{ The real project code is not public, this repo is to show the work I have done into this project }
+{ The real project code is not public at this moment only sample work code opened, this repo is to show the work I have done on this project }
 
 <img width="403" alt="admin_page" src="https://github.com/rajkandula/project_igscf/assets/112989454/76f8ba0c-5ac1-4ab3-aa32-e5fb16bbdfc3">
 <img width="1403" alt="Home_page" src="https://github.com/rajkandula/project_igscf/assets/112989454/1c03c594-4d43-4472-8fc2-dded42efd2e9">
