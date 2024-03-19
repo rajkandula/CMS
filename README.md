@@ -1,5 +1,11 @@
 # CMS - Community Management Software
 
+Project: Community Management Software
+	
+Description: A responsive Community Fellowship website with an admin dashboard is designed to assist small churches and organizations with structuring and managing all aspects of daily operations, Benefits: Greater Management – Automate & streamline data management, Greater Communication – Connect via chat, email, Greater Visibility - Attract new members and more.
+![image](https://github.com/rajkandula/CMS/assets/112989454/a4d6321e-3e7a-489f-b393-906e72a54102)
+
+
 •	Developed a responsive Management website with an admin dashboard to manage the inside content using Express.js, Handlebars, MongoDB & Mongoose, and Firebase.
 •	Used Mongoose to store images and document files on the website.
 
