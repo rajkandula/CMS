@@ -1,34 +1,155 @@
-# CMS - Community Management Software
+# 🌐 Nexus CMS — Professional Community Management System
 
-Project: Community Management Software
-	
-Description: A responsive Community Fellowship website with an admin dashboard is designed to assist small churches and organizations with structuring and managing all aspects of daily operations, Benefits: Greater Management – Automate & streamline data management, Greater Communication – Connect via chat, email, Greater Visibility - Attract new members and more.
-![image](https://github.com/rajkandula/CMS/assets/112989454/a4d6321e-3e7a-489f-b393-906e72a54102)
+<p align="center">
+  <img width="100%" alt="Nexus CMS System Architecture" src="https://github.com/user-attachments/assets/ab19bc60-5487-4c44-9100-2be5bda339a4" />
+</p>
 
+<p align="center">
+  <b>A high-performance, full-stack CMS for modern digital communities.</b><br/>
+  Manage users, content, and media from a centralized, secure admin dashboard.
+</p>
 
-•	Developed a responsive Management website with an admin dashboard to manage the inside content using Express.js, Handlebars, MongoDB & Mongoose, and Firebase.
-•	Used Mongoose to store images and document files on the website.
+<p align="center">
+  <a href="#-project-overview">Overview</a> •
+  <a href="#-key-features">Features</a> •
+  <a href="#-technical-architecture">Architecture</a> •
+  <a href="#-project-structure">Structure</a> •
+  <a href="#-installation--setup">Setup</a> •
+  <a href="#-roadmap">Roadmap</a> •
+  <a href="#-license">License</a>
+</p>
 
-For Project Real-time check, click here- https://igscf.onrender.com/
+---
 
-Developed organization website, 
+## 📖 Project Overview
 
-Project Demonstration Video - https://youtu.be/s_ZAJtUlqoA?feature=shared
+**Nexus CMS** is a robust Content Management System engineered to provide a centralized dashboard for administrators to:
 
-{ The real project code is not public at this moment only sample work code opened, this repo is to show the work I have done on this project }
+- Manage users and roles
+- Curate digital content (blogs, announcements, pages)
+- Upload and serve high-resolution media assets securely
 
-<img width="403" alt="admin_page" src="https://github.com/rajkandula/project_igscf/assets/112989454/76f8ba0c-5ac1-4ab3-aa32-e5fb16bbdfc3">
-<img width="1403" alt="Home_page" src="https://github.com/rajkandula/project_igscf/assets/112989454/1c03c594-4d43-4472-8fc2-dded42efd2e9">
-<img width="1440" alt="Home_page2" src="https://github.com/rajkandula/project_igscf/assets/112989454/b2120650-492e-417d-a9c7-04798e11cb86">
-<img width="1436" alt="login_page" src="https://github.com/rajkandula/project_igscf/assets/112989454/ebd8e6bd-fb89-481a-a38f-4babcb1518d4">
-<img width="1436" alt="admin_page2" src="https://github.com/rajkandula/project_igscf/assets/112989454/231ac4a5-1849-4dc5-8657-dffd46484daa">
-<img width="1314" alt="eventsPage" src="https://github.com/rajkandula/project_igscf/assets/112989454/8fac9f09-1dae-4fc4-a01b-303673c1ba7c">
-<img width="1193" alt="bstudy_page" src="https://github.com/rajkandula/project_igscf/assets/112989454/6dc5146d-4f5e-40cb-bce6-691a574beeb8">
-<img width="1324" alt="help_pahe" src="https://github.com/rajkandula/project_igscf/assets/112989454/d7fa0b82-68eb-4ab5-8562-a36e5c6e0c70">
-<img width="1242" alt="Memories Page" src="https://github.com/rajkandula/project_igscf/assets/112989454/e56e5d0d-24ed-4389-a678-abe4e380e188">
+By using a **Decoupled Data Strategy**, Nexus CMS separates:
 
+- **Content & metadata** → MongoDB Atlas  
+- **Media delivery** → Firebase Cloud Storage  
 
+This enables **high availability** and **fast load times**, even for media-heavy communities.
 
+---
 
+## 🚀 Key Features
 
+### 🛠️ Administrative Governance
 
+- **Role-Based Access Control (RBAC):** Tiered permissions for **Admins**, **Moderators**, and **Members**
+- **Dynamic Dashboard:** Real-time insights on user growth, activity, and engagement
+- **Full CRUD Engine:** Manage blogs, announcements, and pages with status tracking:
+  - `Draft` → `Published` → `Archived`
+
+### 📁 Scalable Infrastructure
+
+- **Hybrid Storage:** Metadata in MongoDB Atlas + media in Firebase Storage
+- **Stateless Auth:** JWT-based authentication for scalable, cross-platform deployments
+- **SEO Optimized:** Server-side rendered Handlebars (HBS) templates for fast indexing
+
+---
+
+## 🏗️ Technical Architecture
+
+This project follows a modern **MVC (Model–View–Controller)** approach:
+
+- **View Layer:** Handlebars templates + CSS3 (Flex/Grid) + Vanilla JS
+- **Logic Layer:** Node.js / Express middleware for:
+  - validation
+  - auth guards
+  - business logic
+- **Data Layer:** Mongoose schemas for strict validation and relationships
+- **External Integration:** Firebase Admin SDK for secure media handling and delivery
+
+---
+
+## 📂 Project Structure
+
+```txt
+.
+├── config/             # Database & Firebase service connections
+├── controllers/        # Controllers for route logic
+├── middleware/         # Auth guards & role validation
+├── models/             # Mongoose models (User, Post, Community)
+├── public/             # Static assets (CSS, images, client-side JS)
+├── routes/             # API + view route definitions
+├── views/              # Handlebars (HBS) template files
+└── app.js              # Application entry point & configuration
+```
+
+---
+
+## 🛠️ Installation & Setup
+
+### 1) Prerequisites
+
+- **Node.js** `v16+`
+- **MongoDB Atlas** account + cluster
+- **Firebase** project credentials
+
+### 2) Clone & Install
+
+```bash
+git clone https://github.com/rajkandula/CMS.git
+cd CMS
+npm install
+```
+
+### 3) Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+PORT=3000
+MONGO_URI=your_mongodb_atlas_connection_string
+FIREBASE_API_KEY=your_firebase_key
+JWT_SECRET=your_super_secret_string
+```
+
+> Tip: Never commit `.env` to GitHub. Add it to `.gitignore`.
+
+### 4) Run the Application
+
+```bash
+# Development mode
+npm run dev
+
+# Production mode
+npm start
+```
+
+---
+
+## 📈 Roadmap
+
+- [ ] **Socket.io Integration:** Real-time chat and live community notifications
+- [ ] **Advanced Search:** Integrate Algolia for instant content filtering
+- [ ] **REST API Docs:** Swagger / OpenAPI for developer access
+- [ ] **Analytics Suite:** Heatmaps and engagement tracking for admins
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+- Open an issue for bugs/feature requests
+- Submit a PR with clear context and screenshots when relevant
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+---
+
+## 👤 Maintainer
+
+**Charan Raj Kandula**
